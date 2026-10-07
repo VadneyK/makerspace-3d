@@ -1,0 +1,16 @@
+{
+  "name": "makerspace-3d",
+  "owner": {
+    "name": "Kentaro Vadney"
+  },
+  "plugins": [
+    {
+      "name": "makerspace-3d",
+      "source": "./",
+      "description": "Maker space 3D printing context: skill, printer setup, slicing tools with a G-code safety gate, build123d MCP."
+    }
+  ],
+  "metadata": {
+    "description": "Maker space 3D printing context for Claude Code."
+  }
+}

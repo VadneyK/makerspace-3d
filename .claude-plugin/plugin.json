@@ -1,0 +1,6 @@
+{
+  "name": "makerspace-3d",
+  "version": "0.1.0",
+  "description": "3D printing context for a maker space Bambu X1C with AMS: a design and slicing skill, the printer setup and filament stock, a safety-gated slicing toolkit, and the build123d CAD MCP server.",
+  "author": { "name": "Kentaro Vadney" }
+}
