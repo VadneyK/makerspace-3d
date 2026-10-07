@@ -125,7 +125,7 @@ that sits next to this file points here first.
   several such pieces on one plate so the swaps are shared (3 bases: 12.4 h).
   Better: lay the face on the bed and make the lettering a flat inlay in the
   first two layers (or the last two layers on a top face): 3.4 h per base.
-- Tools: `tools/slicer.py` (assemble list, range injection, slice report,
+- Tools (the plugin's `tools/` folder, copied to `~/makerspace-3d/tools/` by `/makerspace-3d:setup`): `tools/slicer.py` (assemble list, range injection, slice report,
   `check_gcode` safety gate), `tools/bambu_presets.py` (flatten presets),
   `tools/gview.py` (draw a sliced plate from its own G-code).
 
@@ -171,7 +171,7 @@ No navy, no matte line, no dark neutral other than Black and Gray.
   fontTools (real font outlines) and numpy/scipy.
 - A three.js viewer served with `python3 -m http.server` works for previews.
 - build123d MCP server (`build123d-mcp==0.3.90`, added 2026-09-30, tools
-  `mcp__build123d__*`; bundled in this plugin's `.mcp.json`): render_view, measure, analyze_printability while
+  `mcp__plugin_makerspace-3d_build123d__*` when installed through this plugin's `.mcp.json`): render_view, measure, analyze_printability while
   designing. Exports STL/STEP only; 3MF still comes from the Bambu Studio CLI.
 - Verify in the real GUI before shipping: open the 3MF in Bambu Studio, check the process name shows "*" (modified), Global and Objects
   values, Plate Settings > Plate type, then Slice and look at layer 1 with

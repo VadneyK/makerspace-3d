@@ -1,5 +1,7 @@
 ---
-description: Check and set up what makerspace-3d needs (uv, Bambu Studio, Python env, slicer presets)
+name: setup
+description: Check and set up what the makerspace-3d plugin needs (uv, Bambu Studio, Python env, slicer presets). Run by hand once after installing.
+disable-model-invocation: true
 ---
 
 Set up this machine for the maker space 3D printing tools. Work through the checks in order, report one line per
