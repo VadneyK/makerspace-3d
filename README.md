@@ -11,24 +11,28 @@ so you can open a session and ask for printable models, slicing, or help with a 
 | Printer setup | `skills/3d-print-design/PRINTER_SETUP.md` | Hardware, build plates, nozzles, filament in stock, hard-won slicing rules (Bambu Studio quirks, first layer, plate type, multi-color cost). |
 | Tooling survey | `skills/3d-print-design/TOOLING_RESEARCH.md` | Which MCP servers and skills were evaluated, and which were skipped and why. |
 | build123d MCP | `.mcp.json` | Starts the `build123d-mcp` CAD server (render, measure, printability checks). |
+| Command `/makerspace-3d:setup` | `commands/setup.md` | One-shot environment check and setup. |
 | Slicing toolkit | `tools/` | `slicer.py` (assemble a multi-color project through Bambu Studio's CLI, plus `check_gcode`, a safety gate that refuses unsafe G-code), `bambu_presets.py` (flatten Bambu's bundled presets), `gview.py` (draw a sliced plate from its G-code). |
 
 Not included on purpose: personal notes, memory, and individual projects. This is only the shared setup.
 
 ## Install
 
-You need Claude Code, plus `uv` (for the CAD server): `brew install uv`.
-For the slicing tools: Bambu Studio (`brew install --cask bambu-studio`) and Python 3.
+The repo is private. Accept the GitHub invitation first (github.com/VadneyK/makerspace-3d/invitations), then sign in
+once so Claude Code can fetch it: `gh auth login` (install the GitHub CLI with `brew install gh` if needed).
 
-The repo is private, so you must have access to it and be signed in to GitHub (`gh auth login`).
+In Claude Code:
 
 ```
 /plugin marketplace add VadneyK/makerspace-3d
 /plugin install makerspace-3d@makerspace-3d
+/makerspace-3d:setup
 ```
 
-Restart the session, then just ask, for example: "Design a 100 x 60 mm name plate in two colors for the X1C."
-Claude will read the setup first and follow the rules in it.
+`/makerspace-3d:setup` checks for `uv` (the CAD server), Bambu Studio and Python, asks before installing anything,
+builds a Python env in `~/makerspace-3d/`, and writes the slicer presets. Restart the session afterwards, then just
+ask, for example: "Design a 100 x 60 mm name plate in two colors for the X1C." Claude reads the setup first and
+follows the rules in it.
 
 ## Use the tools directly
 
