@@ -88,7 +88,7 @@ python3 -m unittest discover -s tests
 ```
 
 Stdlib only. It checks that the manifests parse, every skill's frontmatter matches its folder, and every path the
-skills and docs point at (markdown links, `${CLAUDE_PLUGIN_ROOT}/...`, `tools/...`) exists. The same test runs in CI.
+skills and docs point at (markdown links, plugin-root references, and paths under tools and skills) exists. The same test runs in CI.
 
 ## Notes
 
