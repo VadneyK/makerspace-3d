@@ -127,7 +127,12 @@ that sits next to this file points here first.
   first two layers (or the last two layers on a top face): 3.4 h per base.
 - Tools (the plugin's `tools/` folder, copied to `~/makerspace-3d/tools/` by `/makerspace-3d:setup`): `tools/slicer.py` (assemble list, range injection, slice report,
   `check_gcode` safety gate), `tools/bambu_presets.py` (flatten presets),
-  `tools/gview.py` (draw a sliced plate from its own G-code).
+  `tools/gview.py` (draw a sliced plate from its own G-code),
+  `tools/preflight.py` (offline pre-print report of a 3MF: plate, nozzle,
+  material limits from `FILAMENTS.md`, and the gate on every sliced plate),
+  `tools/dry_run.py` (exercise every tool on a machine without Bambu Studio).
+- Material limits (nozzle and bed temperatures per plate, drying, AMS,
+  enclosure) for everything in stock: `FILAMENTS.md`, with Bambu's sources.
 
 ## Filament in stock at the maker space (swatch board photo 2026-09-23, updated 2026-10-06)
 

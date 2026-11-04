@@ -10,8 +10,6 @@ import subprocess
 import tempfile
 import zipfile
 
-import trimesh
-
 HERE = os.path.dirname(os.path.abspath(__file__))
 PRESETS = os.path.join(HERE, "presets")
 BAMBU = "/Applications/BambuStudio.app/Contents/MacOS/BambuStudio"
@@ -208,6 +206,7 @@ def slice_report(path):
 
 
 def load(stem):
+    import trimesh   # only the mesh helpers need it; check_gcode and the reports do not
     return trimesh.load(os.path.join(HERE, "stl", stem + ".stl"))
 
 
