@@ -7,8 +7,12 @@ description: 3D printing pipeline for the maker space Bambu X1C with AMS. Use be
 
 ## Read first
 1. [PRINTER_SETUP.md](PRINTER_SETUP.md): hardware, plates, nozzles, filament in stock, slicing rules, the safety gate.
-2. [TOOLING_RESEARCH.md](TOOLING_RESEARCH.md): which MCP servers and skills were evaluated, and why.
-3. The project's own `HANDOFF.md` if one exists.
+2. [FILAMENTS.md](FILAMENTS.md): per-material nozzle and bed temperatures, plates, drying, AMS and enclosure
+   limits from Bambu's public pages, with sources. Pick the material row before choosing presets.
+3. [TOOLING_RESEARCH.md](TOOLING_RESEARCH.md): which MCP servers and skills were evaluated, and why.
+4. The project's own `HANDOFF.md` if one exists.
+5. Before anything goes to the printer, the `pre-print-check` skill (`skills/pre-print-check/SKILL.md`) and its
+   script `${CLAUDE_PLUGIN_ROOT}/tools/preflight.py <file.3mf>`.
 
 ## Hard rules
 - **Nozzle choice belongs to whoever is printing.** State the time and risk trade-off once, then build for the nozzle

@@ -3,3 +3,4 @@ __pycache__/
 venv/
 tools/presets/
 .DS_Store
+.pytest_cache/
