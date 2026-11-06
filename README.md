@@ -81,6 +81,15 @@ Copy `skills/3d-print-design/` into `~/.claude/skills/` and add the CAD server y
 claude mcp add build123d -- uv tool run --python 3.12 build123d-mcp==0.3.90
 ```
 
+## Checking the repo
+
+```
+python3 -m unittest discover -s tests
+```
+
+Stdlib only. It checks that the manifests parse, every skill's frontmatter matches its folder, and every path the
+skills and docs point at (markdown links, plugin-root references, and paths under tools and skills) exists. The same test runs in CI.
+
 ## Notes
 
 - The filament list and plates are a snapshot of one maker space (September to October 2026). Confirm before relying on them.
