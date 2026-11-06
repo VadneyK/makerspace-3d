@@ -18,25 +18,33 @@ Not included on purpose: personal notes, memory, and individual projects. This i
 
 ## Install
 
-The repo is public, so no GitHub login or invitation is needed.
+1. Accept the GitHub invitation (github.com/VadneyK/makerspace-3d/invitations). The repo is private, so until you do,
+   every command below fails with "Repository not found".
+2. Let Claude Code use your GitHub login. In Terminal, answer yes when it asks about git credentials:
 
-1. Install the plugin from Terminal. Doing it there avoids the interactive plugin screen:
+   ```
+   gh auth login
+   gh auth setup-git
+   ```
+
+   (Install the GitHub CLI first with `brew install gh` if you do not have it.)
+3. Install the plugin from Terminal. Doing it there avoids the interactive plugin screen:
 
    ```
    claude plugin marketplace add VadneyK/makerspace-3d
    claude plugin install makerspace-3d@makerspace-3d
    ```
 
-2. Start `claude` and run `/makerspace-3d:setup`. It checks for `uv` (the CAD server), Bambu Studio and Python, asks
+4. Start `claude` and run `/makerspace-3d:setup`. It checks for `uv` (the CAD server), Bambu Studio and Python, asks
    before installing anything, builds a Python env in `~/makerspace-3d/`, and writes the slicer presets. Restart the
    session afterwards and check `/mcp`: `plugin:makerspace-3d:build123d` should show as connected (the first start
    downloads Python 3.12 and can take a minute).
-3. Ask for something: "Design a 100 x 60 mm name plate in two colors for the X1C." Claude reads the setup first and
+5. Ask for something: "Design a 100 x 60 mm name plate in two colors for the X1C." Claude reads the setup first and
    follows the rules in it.
 
 The Claude desktop app's Code tab reads the same plugin settings, so a plugin installed from Terminal shows up there
 under + > Plugins. Adding a custom GitHub marketplace from the desktop prompt box is not documented, so use Terminal
-for step 1.
+for steps 3 and 4's first half.
 
 ### Updates
 
